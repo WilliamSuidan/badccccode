@@ -1,0 +1,73 @@
+//William Suidan
+//ICS3UR
+//CCCJ1 Coordinates problem
+//Feb 19, 2020
+import java.util.Scanner;
+
+public class main
+{
+    static int x = 0;
+    static int y = 0;
+
+
+    public static void main(String[] args)
+    {
+        Scanner userinput = new Scanner(System.in); //Creates variable to store scanner input
+
+        System.out.println("Enter your X - coordinate: ");
+        int x = userinput.nextInt();
+
+        System.out.println("Enter your Y - coordinate: ");
+        int y = userinput.nextInt();
+
+        System.out.println("Your Coordinates are: (" + x + ", " + y + ")");
+
+        System.out.println(" ");
+        System.out.println("Your Coordinate is in/on: ");
+        if (x > 0)
+        {
+            if (y > 0)
+            {
+                System.out.println("Quadrant 1");
+            }
+            else if (y < 0)
+            {
+                System.out.println("Quadrant 4");
+            }
+            else if (y == 0)
+            {
+                System.out.println("Positive X Axis");
+            }
+        }
+        else if (x < 0)
+        {
+            if (y > 0)
+            {
+                System.out.println("Quadrant 2");
+            }
+            else if (y < 0)
+            {
+                System.out.println("Quadrant 3");
+            }
+            else if (y == 0)
+            {
+                System.out.println("Negative X Axis");
+            }
+        }
+        else if (x == 0)
+        {
+            if (y == 0)
+            {
+                System.out.println("On Origin");
+            }
+            else if (y > 0)
+            {
+                System.out.println("Positive Y Axis");
+            }
+            else if (y < 0)
+            {
+                System.out.println("Negative Y Axis");
+            }
+        }
+    }
+}
