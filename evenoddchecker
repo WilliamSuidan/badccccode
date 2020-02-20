@@ -1,0 +1,44 @@
+//William Suidan
+//ICS3UR
+//Even odd checker
+//Feb 19, 2020
+import java.util.Scanner;
+
+public class main
+{
+    //Initializing variables at the top
+    static int number;
+    static int askcount = 0; //number of iterations desired by user
+    static int runcount = 0; //number of runs
+
+
+    public static void main(String[] args)
+    {
+        Scanner userinput = new Scanner(System.in); //Creates variable to store scanner input
+
+        System.out.println("How many numbers would you like to test?");
+        int askcount = userinput.nextInt();
+        System.out.println("You will enter: (" + askcount + ") numbers.");
+        System.out.println(" ");
+
+        while (runcount < askcount)
+        {
+
+            System.out.println("Enter your number");
+            int number = userinput.nextInt();
+            System.out.println("Your number is: " + "(" + number + ")");
+
+            if (number % 2 == 0)
+            {
+                System.out.println("The number: " + "("+ number +")" + " is even.");
+            }
+            else
+            {
+                System.out.println("The number: " + "(" + number + ")" + "is odd");
+            }
+            System.out.println(" ");
+            number = 0;
+            runcount += 1; //adds one to iteration variable after each run
+        }
+    }
+}
