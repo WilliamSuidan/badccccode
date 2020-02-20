@@ -1,0 +1,26 @@
+//William Suidan
+//ICS3UR
+//CCCJ1 Coordinates problem
+//Feb 19, 2020
+import java.util.Scanner;
+
+public class main
+{
+    static int q1 = 1;
+    static int q2 = 2;
+    static int q3 = 3;
+    static int q4 = 4;
+
+
+    public static void main(String[] args)
+    {
+        Scanner userinput = new Scanner(System.in); //Creates variable to store scanner input
+
+        System.out.println("Enter your flip pattern");
+        String userflip = userinput.nextLine();
+
+        System.out.println("Your flips are as follows " + userflip);
+
+        String[] arrSplit = userflip
+    }
+}
