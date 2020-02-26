@@ -1,4 +1,4 @@
-                                               public class main                                                                                                                    
+public class main                                                                                                                    
 {                                                                                                                                    
     static int baselength = 69; //length of the base                                                                                 
     static int starcount = 1; //number os stars to be inputted minimum                                                               
