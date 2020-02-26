@@ -1,43 +1,39 @@
-public class main                                                 
-{                                                                 
-                                                                  
-    static int x1 = 19;//note x must be odd for equilateral triangle
-    static int x2 = x1;                                           
-    static int offcount1 = 0;                                     
-    static int rowcount = 0;                                      
-    static int newcount = 0;                                      
-    static int offcount2 = 0;                                     
-    static int difference = 0;                                    
-    static int starcount = 0;                                     
-    static int printcount = 0;                                    
-                                                                  
-                                                                  
-    public static void main (String[] args)                       
-    {                                                             
-        //initial math                                            
-        offcount1 = (x1 - (x1 % 2))/2;                            
-        offcount2 = offcount1;                                    
-        System.out.println("offset from right = " + offcount1);   
-        for ( ; x2 > 0; x2 -= 2)                                  
-        {                                                         
-            rowcount += 1;                                        
-        }                                                         
-        System.out.println("number of rows = " + rowcount);       
-        for ( ; newcount < rowcount; newcount+=1)                 
-        {                                                         
-            offcount2 = offcount1-difference;                     
-            for ( ; offcount2 > 0; offcount2 -= 1)                
-            {                                                     
-                System.out.print(" ");                            
-            }                                                     
-            for ( ; printcount <= starcount; printcount +=1)      
-            {                                                     
-                System.out.print("*");                            
-            }                                                     
-            System.out.println();                                 
-            starcount+=2;                                         
-            printcount = 0;                                       
-            difference = difference+1;                            
-        }                                                         
-    }                                                             
-}                                                                 
+                                               public class main                                                                                                                    
+{                                                                                                                                    
+    static int baselength = 69; //length of the base                                                                                 
+    static int starcount = 1; //number os stars to be inputted minimum                                                               
+    static int spacecount = 0; //count of maximum number of spaces from right                                                        
+    static int height = 0; //height of triangle                                                                                      
+    static int charcount = 0; //counts characters to be inputted                                                                     
+    public static void main (String[] args)                                                                                          
+    {                                                                                                                                
+        spacecount = (baselength - (baselength % 2))/2;                                                                              
+        for ( ; baselength >= starcount; )                                                                                           
+        {                                                                                                                            
+            height += 1;                                                                                                             
+            starcount += 2;                                                                                                          
+        }                                                                                                                            
+        starcount = 1;                                                                                                               
+        for (int heightcount = 0; height > heightcount; )                                                                            
+        {                                                                                                                            
+            charcount = 0;                                                                                                           
+            heightcount += 1;                                                                                                        
+            for ( ;charcount < spacecount; )                                                                                         
+            {                                                                                                                        
+                System.out.print(" ");                                                                                               
+                charcount += 1;                                                                                                      
+                                                                                                                                     
+            }                                                                                                                        
+            spacecount -= 1;                                                                                                         
+            charcount = 0;                                                                                                           
+            for ( ;charcount < starcount ; )                                                                                         
+            {                                                                                                                        
+                System.out.print("*");                                                                                               
+                charcount += 1;                                                                                                      
+            }                                                                                                                        
+            starcount += 2;                                                                                                          
+            System.out.println();                                                                                                    
+        }                                                                                                                            
+    }                                                                                                                                
+}                                                                                                                                    
+                                                                                                                                     
