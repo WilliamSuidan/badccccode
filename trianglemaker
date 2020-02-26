@@ -1,0 +1,43 @@
+public class main                                                 
+{                                                                 
+                                                                  
+    static int x1 = 19;//note x must be odd for equilateral triangle
+    static int x2 = x1;                                           
+    static int offcount1 = 0;                                     
+    static int rowcount = 0;                                      
+    static int newcount = 0;                                      
+    static int offcount2 = 0;                                     
+    static int difference = 0;                                    
+    static int starcount = 0;                                     
+    static int printcount = 0;                                    
+                                                                  
+                                                                  
+    public static void main (String[] args)                       
+    {                                                             
+        //initial math                                            
+        offcount1 = (x1 - (x1 % 2))/2;                            
+        offcount2 = offcount1;                                    
+        System.out.println("offset from right = " + offcount1);   
+        for ( ; x2 > 0; x2 -= 2)                                  
+        {                                                         
+            rowcount += 1;                                        
+        }                                                         
+        System.out.println("number of rows = " + rowcount);       
+        for ( ; newcount < rowcount; newcount+=1)                 
+        {                                                         
+            offcount2 = offcount1-difference;                     
+            for ( ; offcount2 > 0; offcount2 -= 1)                
+            {                                                     
+                System.out.print(" ");                            
+            }                                                     
+            for ( ; printcount <= starcount; printcount +=1)      
+            {                                                     
+                System.out.print("*");                            
+            }                                                     
+            System.out.println();                                 
+            starcount+=2;                                         
+            printcount = 0;                                       
+            difference = difference+1;                            
+        }                                                         
+    }                                                             
+}                                                                 
