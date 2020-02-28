@@ -1,0 +1,28 @@
+public class main
+{
+    static int maxlength = 9;
+    static int spacecount = 0;
+    static int printcount = 0; //number of print iterations
+
+    public static void main (String[] args)
+    {
+        for ( ;maxlength > 0; )
+        {
+            for ( ;printcount <= spacecount; )
+            {
+                System.out.print(" ");
+                printcount += 1;
+            }
+            printcount = 0;
+            for ( ;printcount < maxlength; )
+            {
+                System.out.print("*");
+                printcount += 1;
+            }
+            System.out.println();
+            spacecount += 1;
+            printcount = 0;
+            maxlength -= 2;
+        }
+    }
+}
