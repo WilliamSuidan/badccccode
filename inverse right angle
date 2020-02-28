@@ -1,0 +1,21 @@
+public class main
+{
+    static int maxlength = 7; //maximum length for triangle
+    static int starcount = 0; //number of stars printed
+
+    public static void main (String[] args)
+    {
+        for ( ;maxlength >= 0 ; )
+        {
+            for ( ;maxlength >= starcount;  )
+            {
+                System.out.print("*");
+                starcount += 1;
+            }
+            starcount = 0;
+            System.out.println();
+            maxlength -= 1;
+        }
+
+    }
+}
