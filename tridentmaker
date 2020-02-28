@@ -1,0 +1,58 @@
+//William Suidan
+//February/28/2020
+//ICS3UR
+//Print a trident based on a series of given inputs
+import java.util.Scanner;
+public class main
+{
+    static int maxwidth = 0;
+    static int spacing = 0;
+    static int prongspacing = 0;
+    static int prongheight = 0;
+    static int handleheight = 0;
+
+    public static void main(String[] args)
+    {
+        Scanner userinput = new Scanner(System.in);
+        System.out.print("Spacing Between Prongs");
+        prongspacing = userinput.nextInt();
+        System.out.print("Prongheight");
+        prongheight = userinput.nextInt();
+        System.out.print("Handleheight");
+        handleheight = userinput.nextInt();
+
+        maxwidth = (2*prongspacing) + 3;
+        //prongs
+        for(int a=0; a < prongheight; a++)
+        {
+            System.out.print("*");
+            for (int b=0; b < prongspacing; b++)
+            {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            for (int b=0; b < prongspacing; b++)
+            {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            System.out.println();
+        }
+        //connecting piece
+        for (int c=0; c < maxwidth; c++)
+        {
+            System.out.print("*");
+        }
+        //stem
+        spacing = (maxwidth-(maxwidth % 2))/2;
+        for (int d=0; d < handleheight; d++)
+        {
+            System.out.println();
+            for (int e=0; e < spacing; e++)
+            {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+        }
+    }
+}
