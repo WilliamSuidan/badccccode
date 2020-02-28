@@ -1,0 +1,21 @@
+public class main
+{
+    static int b = 7;
+    static int starcount = 0;
+    static int maxstar = 1;
+    public static void main (String[] args)
+    {
+        for( ;maxstar<=b; )
+        {
+            for( ;starcount<maxstar; )
+            {
+                System.out.print("*");
+                starcount +=1;
+            }
+            starcount = 0;
+            System.out.println();
+            maxstar +=1;
+        }
+
+    }
+}
