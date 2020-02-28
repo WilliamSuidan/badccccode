@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class main
+{
+    static int n;
+    static int k;
+    static int sum;
+    public static void main (String[] args)
+    {
+        Scanner userinput = new Scanner(System.in);
+        System.out.println("Enter value of n");
+        n = userinput.nextInt();
+        System.out.println("Enter the value of k");
+        k = userinput.nextInt();
+
+        for ( ;k>=0;k-=1 )
+        {
+            sum += n;
+            n *= 10;
+        }
+        System.out.println(sum);
+    }
+}
