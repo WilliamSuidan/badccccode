@@ -1,0 +1,39 @@
+import java.util.*;
+public class main
+{
+    static int incount = 0;
+    static String deltadstr;
+    static String deltatstr;
+    static String userinput;
+    static String splitinputline;
+    public static void main(String[] args)
+    {
+        Scanner scannerINTOBJ = new Scanner(System.in);
+        System.out.println("How many lines will you input");
+        int incount = scannerINTOBJ.nextInt();
+
+        Scanner scannerSTROBJ = new Scanner(System.in);
+        ArrayList<String> inputsarray = new ArrayList<String>();
+        for(int i = 0; i < incount; i++)
+        {
+            userinput = "";
+            System.out.println("Enter the delta Time followed by the delta Distance, separated by a space");
+            String userinput = scannerSTROBJ.nextLine();
+            inputsarray.add(userinput);
+        }
+
+        for(int x = 0; x < incount; x++)
+        {
+            String inputline = inputsarray.get(x);
+            String[] data = inputline.split(" ");
+            deltatstr = data[0];
+            deltadstr = data[1];
+
+            double deltaTdouble = Double.parseDouble(deltatstr);
+            double deltaDdouble = Double.parseDouble(deltadstr);
+            double velocity = (deltaDdouble/deltaTdouble);
+            double[] velocities = new double[velocity];
+        }
+
+    }
+}
